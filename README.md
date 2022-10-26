@@ -3,7 +3,7 @@ Sheypoor nested comments technical interview test.
 
 How to use?
 
-First you need to install all requirements using pip -r install requirements.txt
+First you need to install all requirements using pip install -r requirements.txt
 Then you need to migrate using python manage.py migrate
 Then you need run app using python manage.py runserver
 
