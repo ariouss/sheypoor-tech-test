@@ -11,6 +11,6 @@ apiRouter.register(r'comments', views.CommentViewSet)
 
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('comments/', views.CommentListAPIView.as_view(), name='comment'),
+    path('comments/', views.CommentListAPIView.as_view(), name='comments'),
     path('api/', include(apiRouter.urls)),
 ]
