@@ -1,0 +1,16 @@
+version: '2'
+services:
+  web:
+    build: .
+    container_name: "sheypoor_tech_test_web"
+    restart: unless-stopped
+    depends_on:
+      - db
+    volumes:
+    - ./logs:/project/logs
+    - ./media:/project/media
+    ports:
+    - 127.0.0.1:10002:8000
+    environment:
+      - "DJANGO_DATABASE_PASSWORD=12345"
+      - "DJANGO_ENV=prod"
