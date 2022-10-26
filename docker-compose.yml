@@ -14,3 +14,17 @@ services:
     environment:
       - "DJANGO_DATABASE_PASSWORD=12345"
       - "DJANGO_ENV=prod"
+
+  db:
+    image: postgres:alpine
+    container_name: "sheypoor_tech_test_db"
+    restart: unless-stopped
+    volumes:
+    - ./data:/var/lib/postgresql/data
+    ports:
+    - 127.0.0.1:5433:5432
+    environment:
+      - TZ=Asia/Tehran
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_DB=sheypoor_tech_test
